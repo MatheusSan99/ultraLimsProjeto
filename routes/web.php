@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\EnderecoController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +14,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [EnderecoController::class, 'dashboard'])->name('dashboard');
+Route::get('/listadeceps', [EnderecoController::class, 'listaDeCeps'])->name('listadeceps');
+Route::get('/inserirnovocep', [EnderecoController::class, 'novoCep'])->name('novoCep');
+Route::post('/inserirnovocep', [EnderecoController::class, 'salvarCep'])->name('salvarCep');
+Route::delete('/listadeceps/apagar/{id}', [EnderecoController::class, 'deletarEndereco'])->name('deletarEndereco');
+Route::post('/carregarceps', [EnderecoController::class, 'apiCeps'])->name('apiCeps');
+
+Route::get('/ordenarBairro', [EnderecoController::class, 'ordenarBairro'])->name('ordenarBairro');
+Route::get('/ordenarCidade', [EnderecoController::class, 'ordenarCidade'])->name('ordenarCidade');
+Route::get('/ordenarUF', [EnderecoController::class, 'ordenarUF'])->name('ordenarUF');
+

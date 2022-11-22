@@ -1,0 +1,59 @@
+{
+    "enderecos": [
+        {
+            "endereco": {
+                "id": 425121203,
+                "cep": "88330003",
+                "rua": "Avenida Atlântica",
+                "bairro": "Centro",
+                "cidade": "Balneário Camboriú",
+                "uf": "SC",
+                "ibge": "4202008"
+            }
+        },
+        {
+            "endereco": {
+                "id": 328165203,
+                "cep": "49010900",
+                "rua": "Rua Pacatuba",
+                "bairro": "Centro",
+                "cidade": "Aracaju",
+                "uf": "SE",
+                "ibge": "2800308"
+            }
+        },
+        {
+            "endereco": {
+                "id": 658945678,
+                "cep": "20020050",
+                "rua": "Avenida Churchill",
+                "bairro": "Centro",
+                "cidade": "Rio de Janeiro",
+                "uf": "RJ",
+                "ibge": "3304557"
+        }
+        },
+        {
+            "endereco": {
+                "id": 984587452,
+                "cep": "11065101",
+                "rua": "Rua Euclides da Cunha",
+                "bairro": "Pompéia",
+                "cidade": "Santos",
+                "uf": "SP",
+                "ibge": "3548500"
+            }
+        },
+        {
+            "endereco": {
+                "id": 245878465,
+                "cep": "89010000",
+                "rua": "Rua 15 de Novembro",
+                "bairro": "Centro",
+                "cidade": "Blumenau",
+                "uf": "SC",
+                "ibge": "4202404"
+            }
+        }
+    ]
+}

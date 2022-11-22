@@ -1,0 +1,96 @@
+* {
+    color: black;
+}
+#fonte-cinza, #titulo, #copyright {color: #d1d1d1;}
+
+#formulario, #products {
+    margin-top: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.pagination-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+@media screen and (max-width: 768px) {
+    #products {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-content: flex-end;
+    }
+}
+#header {
+    padding-top: 50px;
+}
+#sidebar {
+    margin-top: 50px;
+}
+.table-admin {
+    /*background: rgb(255,226,187);*/
+    /*background: radial-gradient(circle, rgba(255,226,187,1) 27%, rgba(227,182,69,0.9948354341736695) 100%, rgba(247, 187, 24, 0.67) 100%);*/
+    background-image: linear-gradient(to bottom, transparent 0%, #fff 50%),
+    url("../../../img/logo-design/Background-Avermelhado1.png");
+}
+.table-admin-head {
+    background: rgb(255,255,255);
+    background: linear-gradient(90deg, rgba(255,255,255,1) 21%, rgba(149,13,18,1) 94%);
+}
+.table-admin-fundo {
+    background-image: linear-gradient(to bottom, transparent 0%, #fff 50%),
+    url("../../../img/logo-design/Background-Avermelhado1.png");
+}
+.dropdown-menu-space {
+    margin-top: 5px;
+    margin-left: 25px;
+}
+.pagination-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.card-padding {
+    padding-top: 15px;
+}
+.info-padding {
+    margin-top: 20px;
+}
+.alert-button {
+    padding: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.button-alert-admin{
+    border: 1px green solid;
+    border-radius: 10px;
+    padding: 5px;
+    transition: .2s ease-in-out 0s;
+}
+.button-alert-admin:hover {
+    transform: scale(1.25);
+}
+#form {
+    background: #9e9d9d;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+.botao-confirma {
+    top: 520px;
+    margin-top: 10px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.pagination-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.botao-de-ordenar {
+    background: #c3c3c3;
+    border: 1px solid black;
+    border-radius: 5px;
+}
