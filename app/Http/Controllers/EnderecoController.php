@@ -123,4 +123,37 @@ class EnderecoController extends Controller
 
         return Redirect::route('listadeceps');
     }
+
+    public function segundaAvaliacao(array &$numeros)
+    {
+
+        if(count($numeros) <= 1) return $numeros;
+
+        $inicioDoArray = $numeros[0];
+
+        $esquerda = $direita = array();
+
+        for($i=1; $i <count($numeros); $i++) {
+            if ($numeros[$i] < $inicioDoArray) {
+                $esquerda[] = $numeros[$i];
+            } else {
+                $direita[] = $numeros[$i];
+            }
+        }
+
+        return array_merge($this->segundaAvaliacao($esquerda), (array)($inicioDoArray), $this->segundaAvaliacao($direita));
+
+    }
+
+    public function recebeArray(Request $request, TransationMessage $transationMessage)
+    {
+        $numeros = [];
+        foreach ($request->except('_token') as $item) {
+            $numeros[] = $item;
+        }
+
+        $array = $this->segundaAvaliacao($numeros);
+        $transationMessage->arrayOrdenado($request,$array);
+        return Redirect::route('dashboard');
+    }
 }

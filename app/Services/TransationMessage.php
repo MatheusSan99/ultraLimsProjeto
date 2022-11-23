@@ -31,5 +31,14 @@ class TransationMessage
                 "Você apagou um registro"
             );
     }
+    public function arrayOrdenado(Request $request, array $array)
+    {
+        $request->session()
+            ->flash(
+                'message',
+                "o Array ficou assim " . $array[0] . " " . $array[1] . " " . $array[2] . " " . $array[3] . " " . $array[4]
+            );
+    }
+
 
 }

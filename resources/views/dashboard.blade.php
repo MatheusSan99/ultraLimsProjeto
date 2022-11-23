@@ -20,6 +20,7 @@
             <div class="alert-button">
                 <a href="{{route('listadeceps')}}"><button class="button-alert-admin">Lista de Endereços</button></a>
             </div>
+
                 <form enctype="multipart/form-data"
                       method="POST"
                       action="{{route('apiCeps')}}">
@@ -28,6 +29,20 @@
                         <button class="button-alert-admin" type="submit">Importar Ceps via JSON</button>
                     </div>
                 </form>
+
+                <div class="alert-button">
+                    <form enctype="multipart/form-data" class="form-segundaavaliacao"
+                          method="POST"
+                          action="{{route('segundaAvaliacao')}}">
+                        @csrf
+                    <input name="numero1" type="number" class="p-1" placeholder="Insira O Número">
+                    <input name="numero2" type="number" class="p-1" placeholder="Insira O Número">
+                    <input name="numero3" type="number" class="p-1" placeholder="Insira O Número">
+                    <input name="numero4" type="number" class="p-1" placeholder="Insira O Número">
+                    <input name="numero5" type="number" class="p-1" placeholder="Insira O Número">
+                    <button class="button-alert-admin mt-3 m-3" type="submit">Segunda Avaliação</button>
+                    </form>
+                </div>
         </section>
     </main>
 @endsection

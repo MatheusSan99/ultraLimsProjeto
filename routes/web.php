@@ -28,3 +28,5 @@ Route::get('/ordenarCidadeDesc', [EnderecoController::class, 'ordenarCidadeDesc'
 Route::get('/ordenarUF', [EnderecoController::class, 'ordenarUF'])->name('ordenarUF');
 Route::get('/ordenarUFDesc', [EnderecoController::class, 'ordenarUFDesc'])->name('ordenarUFDesc');
 
+
+Route::post('/segundaavaliacao', [EnderecoController::class, 'recebeArray'])->name('segundaAvaliacao');
