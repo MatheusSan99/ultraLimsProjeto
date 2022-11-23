@@ -24,7 +24,7 @@
                         <th scope="col">Rua</th>
                         <th scope="col"><button class="botao-de-ordenar" type="submit" formaction="{{route('ordenarBairro', $bairro = true)}}">Ordenar Bairro</button></th>
                         <th scope="col"><button class="botao-de-ordenar" type="submit" formaction="{{route('ordenarCidade')}}">Ordenar Cidade</button></th>
-                        <th scope="col"><button  class="botao-de-ordenar" type="submit" formaction="{{route('ordenarUF', $uf = 'ordenado')}}">Ordenar UF</button></th>
+                        <th scope="col"><button class="botao-de-ordenar" type="submit" formaction="{{route('ordenarUF','ordenado')}}">Ordenar UF</button></th>
                         <th scope="col">IBGE</th>
                     </tr>
                     </thead>

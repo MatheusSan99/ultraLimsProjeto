@@ -23,5 +23,5 @@ Route::post('/carregarceps', [EnderecoController::class, 'apiCeps'])->name('apiC
 
 Route::get('/ordenarBairro', [EnderecoController::class, 'ordenarBairro'])->name('ordenarBairro');
 Route::get('/ordenarCidade', [EnderecoController::class, 'ordenarCidade'])->name('ordenarCidade');
-Route::get('/ordenarUF', [EnderecoController::class, 'ordenarUF'])->name('ordenarUF');
+Route::get('/ordenarUF/{true}', [EnderecoController::class, 'ordenarUF'])->name('ordenarUF');
 

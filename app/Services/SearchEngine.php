@@ -4,6 +4,7 @@ namespace App\Services;
 
 use App\Models\Endereco;
 use Illuminate\Http\Request;
+use PhpParser\Node\Stmt\Return_;
 
 class SearchEngine
 {
@@ -33,7 +34,7 @@ class SearchEngine
         $enderecos = Endereco::query();
 
         $enderecos->when($request->search, function ($query, $campoDePesquisa){
-            $query->where('cep', 'like', '%' . $campoDePesquisa . '%')->orWhere('uf', 'like', '%' . $campoDePesquisa . '%')->orWhere('cidade','like', '%' . $campoDePesquisa . '%')->orderBy('cidade ASC');
+            $query->where('cep', 'like', '%' . $campoDePesquisa . '%')->orWhere('uf', 'like', '%' . $campoDePesquisa . '%')->orWhere('cidade','like', '%' . $campoDePesquisa . '%');
 
         });
 
@@ -43,15 +44,10 @@ class SearchEngine
     {
         $enderecos = Endereco::query();
         $enderecos->when($request->search, function ($query, $campoDePesquisa){
-            $query->where('cep', 'like', '%' . $campoDePesquisa . '%')->orWhere('uf', 'like', '%' . $campoDePesquisa . '%')->orWhere('cidade','like', '%' . $campoDePesquisa . '%')->orderBy('uf ASC');
+            $query->where('cep', 'like', '%' . $campoDePesquisa . '%')->orWhere('uf', 'like', '%' . $campoDePesquisa . '%')->orWhere('cidade','like', '%' . $campoDePesquisa . '%');
 
         });
-        dd($request);
-//        if ($enderecos->orderBy('uf')->getQuery()->orders[0]['direction'] == 'asc') {
-//            return $enderecos->orderBy('uf', 'desc')->paginate(5);
-//        }
-
-        return $enderecos->orderBy('uf', 'asc')->paginate(5);
+        return $enderecos->orderBy('uf')->paginate(5);
 
     }
 }
