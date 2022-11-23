@@ -6,6 +6,7 @@ use App\Http\Requests\CepRequestController;
 use App\Models\Endereco;
 use App\Services\SearchEngine;
 use App\Services\TransationMessage;
+use http\Header;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
 
@@ -59,10 +60,24 @@ class EnderecoController extends Controller
 
         return view('cep.listaDeCeps', compact('enderecos'));
     }
+    public function ordenarBairroDesc(Request $request, SearchEngine $searchEngine)
+    {
+        $enderecos = $searchEngine->ordenarBairroDesc($request);
+
+        return view('cep.listaDeCeps', compact('enderecos'));
+    }
 
     public function ordenarCidade(Request $request, SearchEngine $searchEngine)
     {
+
         $enderecos = $searchEngine->ordenarCidade($request);
+
+        return view('cep.listaDeCeps', compact('enderecos'));
+    }
+    public function ordenarCidadeDesc(Request $request, SearchEngine $searchEngine)
+    {
+
+        $enderecos = $searchEngine->ordenarCidadeDesc($request);
 
         return view('cep.listaDeCeps', compact('enderecos'));
     }
@@ -70,6 +85,13 @@ class EnderecoController extends Controller
     public function ordenarUF(Request $request, SearchEngine $searchEngine)
     {
         $enderecos = $searchEngine->ordenarUF($request);
+
+        return view('cep.listaDeCeps', compact('enderecos'));
+    }
+
+    public function ordenarUFDesc(Request $request, SearchEngine $searchEngine)
+    {
+        $enderecos = $searchEngine->ordenarUFDesc($request);
 
         return view('cep.listaDeCeps', compact('enderecos'));
     }

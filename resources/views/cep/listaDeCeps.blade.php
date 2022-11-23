@@ -16,15 +16,34 @@
                 @endif
                 <h5 class="card-title text-center">Lista de Endereços</h5>
                     <form method="get">
+                        @method('GET')
                         @csrf
                 <table class="table table-striped table-hover table-scrollable">
                     <thead>
                     <tr>
                         <th scope="col">Cep</th>
                         <th scope="col">Rua</th>
-                        <th scope="col"><button class="botao-de-ordenar" type="submit" formaction="{{route('ordenarBairro', $bairro = true)}}">Ordenar Bairro</button></th>
-                        <th scope="col"><button class="botao-de-ordenar" type="submit" formaction="{{route('ordenarCidade')}}">Ordenar Cidade</button></th>
-                        <th scope="col"><button class="botao-de-ordenar" type="submit" formaction="{{route('ordenarUF','ordenado')}}">Ordenar UF</button></th>
+                        <th scope="col">
+                                <button class="botao-de-ordenar" type="submit" formaction="{{route('ordenarBairro')}}">Ordenar Bairro Asc
+                                </button>
+
+                                <button class="botao-de-ordenar"  type="submit" formaction="{{route('ordenarBairroDesc')}}">Ordenar Bairro Desc
+                                </button>
+                        </th>
+                        <th scope="col">
+                            <button class="botao-de-ordenar" type="submit" formaction="{{route('ordenarCidade')}}">Ordenar Cidade Asc
+                            </button>
+
+                            <button class="botao-de-ordenar" type="submit" formaction="{{route('ordenarCidadeDesc')}}">Ordenar Cidade Desc
+                            </button>
+                        </th>
+                        <th scope="col">
+                            <button class="botao-de-ordenar" type="submit" formaction="{{route('ordenarUF')}}">Ordenar UF Asc
+                            </button>
+
+                            <button class="botao-de-ordenar" type="submit" formaction="{{route('ordenarUFDesc')}}">Ordenar UF Desc
+                            </button>
+                        </th>
                         <th scope="col">IBGE</th>
                     </tr>
                     </thead>

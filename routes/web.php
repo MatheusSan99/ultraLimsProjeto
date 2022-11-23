@@ -22,6 +22,9 @@ Route::delete('/listadeceps/apagar/{id}', [EnderecoController::class, 'deletarEn
 Route::post('/carregarceps', [EnderecoController::class, 'apiCeps'])->name('apiCeps');
 
 Route::get('/ordenarBairro', [EnderecoController::class, 'ordenarBairro'])->name('ordenarBairro');
+Route::get('/ordenarBairroDesc', [EnderecoController::class, 'ordenarBairroDesc'])->name('ordenarBairroDesc');
 Route::get('/ordenarCidade', [EnderecoController::class, 'ordenarCidade'])->name('ordenarCidade');
-Route::get('/ordenarUF/{true}', [EnderecoController::class, 'ordenarUF'])->name('ordenarUF');
+Route::get('/ordenarCidadeDesc', [EnderecoController::class, 'ordenarCidadeDesc'])->name('ordenarCidadeDesc');
+Route::get('/ordenarUF', [EnderecoController::class, 'ordenarUF'])->name('ordenarUF');
+Route::get('/ordenarUFDesc', [EnderecoController::class, 'ordenarUFDesc'])->name('ordenarUFDesc');
 
