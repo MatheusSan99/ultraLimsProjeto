@@ -22,7 +22,7 @@ Está incluído dentro do sistema áreas para: visualização dos endereços, ad
 
 - Não esqueça de renomear o .env.example para .env e colocar o nome do database que criou, caso contrário o servidor não funcionará
 
-- Para fazer o projeto funcionar, clonar o repositório, dar um composer install, npm install, composer update, e não se esqueça de ligar o servidor MYSQL, após isso, rodar as migrations (php artisan migrate:fresh).
+- Para fazer o projeto funcionar, clonar o repositório, e rodar os seguintes comandos no terminal: NPM INSTALL, COMPOSER INSTALL, e não se esqueça de ligar o servidor MYSQL, após isso, rodar as migrations (php artisan migrate:fresh).
 
 - Subir o servidor com php artisan serve e acessar o projeto.
 
